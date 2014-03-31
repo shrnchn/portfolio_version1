@@ -1,0 +1,720 @@
+/*
+Theme Name: Sharon Chan Portfolio
+Theme URI: http://www.sharonchan.ca
+Description: Portfolio Theme
+Version: 1.0
+Author: Sharon Chan
+Author URI: http://www.sharonchan.ca
+*/
+
+// -------------------------------------------
+// PARTIALS
+// -------------------------------------------
+
+@import "reset";
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Raleway:400,300,700);
+
+// -------------------------------------------
+// GLOBAL
+// -------------------------------------------
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	background: white;
+	max-width: 100%;
+}
+img {
+	max-width: 100%;
+}
+h1 {
+	@include headFont;
+	font-size: 7.5rem;
+	margin: 0 20px;
+	padding: 0;
+	text-align: center;
+	letter-spacing: 2px;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+}
+h2 {
+	@include headFont;
+	font-size: 7rem;
+	margin: 0 20px;
+	padding: 0;
+	text-align: center;
+	letter-spacing: 2px;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+}
+h3 {
+	@include subheadFont;
+	margin: 10px 0;
+	padding: 0;
+}
+h4 {
+	@include subheadFont;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: 1px;
+}
+p {
+	@include bodyFont;
+	font-size: 2rem;
+	line-height: 3rem;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0.5px;
+}
+a {
+	text-decoration: none;
+	color: $black;
+	transition: all linear 0.35s;
+}
+
+ // Header
+ // ------------------------------------------- 
+ nav a#pull {  
+ 	display: none;
+ 	text-transform: lowercase;  
+ } 
+ nav {
+ 	width: 100%;
+ 	background: white;
+ 	padding: 0;
+ 	margin: 0;
+ 	text-transform: uppercase;
+ 	position: fixed;
+ 	z-index: 999;
+ 	ul {
+ 		background: white;
+ 		text-align: center;
+ 		font-size: 0;
+ 		padding: 0;
+ 		li {
+ 			width: 20%;
+ 			margin: 0 auto;
+ 			background: white;
+ 			display: inline-block;
+ 			padding: 15px 0;
+ 			a {
+ 				background: white;
+ 				color: $black;
+ 				text-decoration: none;
+ 				padding: 15px;
+ 				transition: all 0.25s;
+ 				@include menuFont;
+ 				&:hover {
+ 					color: $teal;
+
+ 				}
+ 			}
+ 		}
+ 	}
+ }
+// Content
+// ------------------------------------------- 
+.links {
+	color: $black;
+}
+.links:hover {
+	color: $teal;
+}
+.button {
+	@include bodyFont;
+	font-size: 1.5rem;
+	width: 100px;
+	background: $red;
+	margin: 20px auto 30px auto;
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5s;
+	text-align: center;
+	border-radius: 3px;
+	color: white;
+}
+.button:hover {
+	background: $teal;
+	color: white;
+}
+.kerning {
+	letter-spacing: -15px;
+}
+.welcome {
+	width: 100%;
+	min-height: 100%;
+	background: url('images/02.jpg') no-repeat top fixed;
+	background-size: cover;
+	margin: 0 auto;
+	padding: 100px 20px;
+	color: white;
+	text-align: center;
+}
+a.logo {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	margin-top: 70px;
+	background: url('images/s_logo.png') no-repeat center;
+	text-indent: -9999px;
+	border-radius: 50%;
+}
+a.logo:hover{
+	display: block;
+	width: 150px;
+	height: 150px;
+	background: url('images/avatar_small.jpg') no-repeat center;
+	border-radius: 50%;
+}
+.welcome h2 {
+	margin-top: 25px;
+	margin-bottom: 0;
+}
+.welcome p {
+	width: 60%;
+	margin: 0 20px;
+	font-size: 2rem;
+	line-height: 3rem;
+	padding: 10px 0;
+	padding-bottom: 30px;
+}
+.aboutHeader {
+	width: 100%;
+	background: url('images/06.jpg') no-repeat center fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 60px 20px;
+	min-height: 30%;
+	color: white;
+	text-align: center;
+}
+.aboutContainer {
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto 50px auto;
+	text-align: center;
+}
+.aboutBox {
+	display: inline-block;
+	width: 22%;
+	padding: 10px;
+	border: 1px solid white;
+	position: relative;
+	margin: 50px 10px 0 10px;
+	background: white;
+	vertical-align: top;
+}
+.aboutBox img {
+	width: 40px;
+	position: absolute;
+	top: -20px;
+	left: 42%;
+	transition: all 0.5s;
+}
+.aboutBox img:hover {
+	-webkit-transform: rotate(-30deg);
+}
+.aboutBox h3 {
+	@include subheadFont;
+	font-size: 3rem;
+	text-align: center;
+	color: $black;
+}	
+.aboutBox ul {
+	padding: 0;
+}
+.aboutBox li {
+	@include bodyFont;
+	font-size: 1.65rem;
+	line-height: 2.0125rem;
+	padding: 10px;
+	text-align: left;
+	color: $black;
+	list-style-type: none;
+}
+.bio {
+	display: block;
+	width: 60%;
+	text-align: center;
+	margin: 30px auto;
+	margin-bottom: 0;
+	color: $black;
+}
+.education {
+	border: 1px solid $teal;
+}
+.skills {
+	border: 1px solid $red;
+}
+.experience {
+	border: 1px solid $gray;
+}
+.interests {
+	border: 1px solid $orange;
+}
+.workHeader {
+	width: 100%;
+	background: url('images/07.jpg') no-repeat center fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 60px 20px;
+	min-height: 30%;
+	color: white;
+	text-align: center;
+	clear: both;
+}
+.workContainer {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
+.singlePortfolio {
+	padding: 70px 0;
+	text-align: center;
+}
+	.singlePortfolio h2 {
+		color: $black;
+		margin: 20px auto;
+		text-shadow: none;
+	}
+	.singlePortfolio h3 {
+		color: $black;
+		padding: 0;
+		margin: 0;
+	}
+	.singlePortfolio p {
+		color: $black;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+.technologies li {
+	margin: 20px 5px;
+	display: inline;
+	padding: 5px;
+	border: 1px solid $teal;
+	border-radius: 5px;
+	color: $black;
+}
+.portfolioImages {
+	margin-top: 50px;
+}
+.portfolio {
+	width: 33%;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+}
+.portfolio img {
+	width: 100%;
+	padding: 30px 30px 10px 30px;
+
+}
+.portfolio h3 {
+	width: 100%;
+	@include bodyFont;
+	font-size: 2rem;
+	font-weight: 500;
+	color: $black;
+	padding: 10px;
+	margin: 0;
+}
+.portfolio p {
+	width: 100%;
+	@include bodyFont;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
+	font-weight: 300;
+	padding: 0;
+	color: $black;
+	padding: 0 30px;
+}
+.portfolio a {
+	color: $teal;
+}
+.portfolio .button a {
+	color: white;
+}
+.portfolioButton {
+	@include bodyFont;
+	font-size: 1.5rem;
+	width: 100px;
+	background: $red;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	transition: all 0.35s;
+}
+.portfolioButton:hover {
+	background: $teal;
+	color: white;
+}
+.servicesHeader {
+	width: 100%;
+	background: url('images/08.jpg') no-repeat center fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 60px 20px;
+	min-height: 30%;
+	color: white;
+	text-align: center;
+}
+.serviceContainer {
+	width: 100%;
+	min-height: 100%;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 15px;
+	padding: 0;
+}
+.serviceBox {
+	display: inline-block;
+	width: 35%;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid white;
+}
+.serviceBox h3 {
+	text-align: center;
+	color: $black
+}
+.serviceBox ul, li {
+	@include bodyFont;
+	font-size: 2rem;
+	line-height: 3rem;
+	padding: 5px 0;
+	color: $black;
+	margin: 0;
+	text-align: center;
+	list-style-type: none;
+}
+.linkBox {
+	width: 100%;
+	display: inline-block;
+	clear: both;
+	padding: 0;
+	margin-bottom: 20px;
+	text-align: center;
+	color: $black;
+	@include bodyFont;
+	font-size: 3rem;
+}
+.contactHeader {
+	width: 100%;
+	background: url('images/pattern03.jpg') repeat center fixed;
+	margin: 0;
+	padding: 60px 20px;
+	min-height: 30%;
+	color: white;
+}
+.contactContainer {
+	width: 100%;
+	display: inline-block;
+	background: white;
+	padding: 30px 0;
+	color: $black;
+}
+.contact p {
+	margin: 50px auto;
+	text-align: center;
+	color: white;
+	text-decoration: none;		
+}
+.contact a {
+	color: white;
+	text-decoration: none;
+	width: 15.5%;
+	display: inline-block;
+	float: left;
+}
+.wpcf7 form {
+	width: 50%;
+	margin: 10px 10px 20px 25px;
+	float: left;
+}
+.wpcf7 p {
+	@include bodyFont;
+	font-size: 1.75rem;
+	color: $black;
+	display: block;
+}
+.wpcf7 input {
+	width: 50%;
+	@include bodyFont;
+	font-size: 1.5rem;
+	border: 0;
+	color: $black;
+	border-bottom: 1px solid black;
+	// margin: 0 10px 10px 10px;
+	padding: 5px 0;
+}
+.wpcf7 input:focus {
+	outline: 0;
+}
+input.wpcf7-submit {
+	width: 25%;
+	@include bodyFont;
+	font-size: 1.5rem;
+	color: $black;
+	padding: 10px;
+	border: 1px solid black;
+	background: white;
+}
+.wpcf7-submit:hover {
+	background: black;
+	color: white;
+}
+.wpcf7 textarea {
+	@include bodyFont;
+	font-size: 1.5rem;
+	display: block;
+	width: 95%;
+	height: 150px;
+	// margin: 0 0 10px 10px;
+	border: 1px solid black;
+}
+.wpcf7 textarea:focus {
+	outline: 0;
+}
+.socialMedia {
+	width: 40%;
+	float: left;
+	// margin-left: 10px;
+
+}
+.socialMedia img {
+	width: 60px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	display: block;
+	float: left;
+	transition: all 0.25s;
+
+}
+.socialMedia img:hover {
+	-webkit-transform: rotate(-30deg);
+}
+.socialMedia p {
+	float: left;
+	font-size: 1.75rem;
+	padding: 15px 0 0 10px;
+	color: $black;
+}
+ 	// Footer
+ 	// ------------------------------------------- 
+ 	footer {
+ 		width: 100%;
+ 		padding: 10px;
+ 		background: black;
+ 		text-align: center;
+ 		clear: both;
+ 	}
+ 	footer p {
+ 		@include bodyFont;
+ 		font-size: 1.25rem;
+ 		color: white;
+ 		padding: 3px;
+ 		margin: 0;
+ 	}
+
+ 	footer a {
+ 		color: white;
+ 	}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.aboutBox h3 {
+		font-size: 2.75rem;
+	}	
+	.aboutBox p {
+		font-size: 1.25rem;
+		line-height: 1.875rem;
+		padding: 5px;
+		text-align: left;
+	}
+	.bio {
+		width: 80%;
+		margin-bottom: 0;
+	}
+	.socialMedia img {
+		margin: 10px;
+	}
+	.serviceBox h3 {
+		text-align: center;
+		font-size: 2.75rem;
+	}
+	.serviceBox ul, li {
+		font-size: 1.6rem;
+	}
+	.socialmedia img {
+		width: 25%;
+	}
+	.socialmedia p {
+		padding: 20px 0 0 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	nav {
+		width: 100%;
+		display: block;
+		height: auto;
+		ul {
+			display: none;  
+			height: auto;
+			padding: 0; 
+			li {
+				width: 20%;
+				display: inline-block;
+			}
+		}
+	}	
+	nav a#pull {  
+		display: block;  
+		background: white;  
+		width: 100%;  
+		position: relative;
+		font-size: 3rem;
+		padding: 10px;
+		color: $black;
+		text-align: center;
+		margin: 0 auto;
+
+	}  
+	h1 {
+		font-size: 6rem;
+		margin-top: 10px;
+	}
+	h2 {
+		font-size: 4.75rem;
+	}
+	h4 {
+		font-size: 2rem;
+	}
+	.aboutBox {
+		width: 45%;
+	}
+	.aboutBox img {
+		left: 44%;
+	}
+	.aboutBox p {
+		font-size: 1.5rem;
+		line-height: 2.25rem;
+	}
+	.contactContainer {
+		width: 100%;
+		margin: 0 auto;
+	}
+	form {
+		width: 50%;
+		margin: 0 0 0 10px;
+	}
+	.socialMedia {
+		width: 45%;
+	}
+	.socialMedia p {
+		padding: 20px 0 0 5px;
+		font-size: 1.5rem;
+
+	}
+	input.submitButton {
+		width: 30%;
+	}
+
+}	
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	nav {
+		width: 100%;
+		display: block;
+		height: auto;
+		ul {
+			display: none;  
+			height: auto;
+			padding: 0; 
+			li {
+				padding: 15px;
+				width: 100%;
+				display: block;
+				a {
+					text-align: center;
+				}
+			}
+		}
+	}	
+	nav a#pull {  
+		display: block;  
+		background: white;  
+		width: 100%;  
+		position: relative;
+		font-size: 3rem;
+		padding: 10px;
+		color: $black;
+		text-align: center;
+		margin: 0 auto;
+	}  
+	.welcome p {
+		width: 95%;
+	}
+	h1 {
+		font-size: 3.8rem;
+		margin-top: 10px;
+	}
+	h2 {
+		font-size: 4.75rem;
+	}
+	h4 {
+		font-size: 1.5rem;
+	}
+	.aboutBox {
+		width: 90%;
+	}
+	.workContainer {
+		width: 95%;
+	}
+	.serviceBox {
+		width: 95%;
+		margin: 0;
+	}
+	.serviceBox li {
+		font-size: 1.5rem;
+		line-height: 2.25rem;
+	}
+	.wpcf7 form {
+		width: 90%;
+		margin-left: 15px;
+		margin-bottom: 20px;
+	}
+	.wpcf7 input {
+		width: 65%;
+	}
+	.socialMedia {
+		width: 100%;
+		margin: 0 0 0 20px;
+	}
+	.socialMedia img {
+		width: 15%;
+	}
+	.socialMedia p {
+		padding: 25px 0 0 5px;
+		font-size: 1.5rem;
+	}
+	.portfolio {
+		width: 100%;
+		float: left;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.portfolio img {
+		width: 100%;
+		float: left;
+		padding: 30px 30px 10px 30px;
+	}
+
+}	

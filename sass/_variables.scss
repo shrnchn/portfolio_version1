@@ -1,0 +1,48 @@
+// -------------------------------------------
+// VARIABLES
+// -------------------------------------------
+
+// Colours
+// -------------------------------------------
+$teal: #1abc9c;
+$red: #c0392b;
+$gray: #34495e;
+$purple: #8e44ad;
+$orange: #f39c12;
+$silver: #bdc3c7;
+$lightgray: #95a5a6;
+$cloud: #ecf0f1;
+$black: #444;
+
+// Typography
+// -------------------------------------------
+$lato: 'Lato', sans-serif;
+$raleway: 'Raleway', sans-serif;
+
+// Font weights
+// -------------------------------------------
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+@mixin headFont {
+	font-family: $lato;
+	font-weight: $bold;
+}
+@mixin subheadFont {
+	font-family: $lato;
+	font-weight: $regular;
+	font-size: 3rem;
+	letter-spacing: 0.5px;
+}
+@mixin bodyFont {
+	font-family: $lato;
+	font-weight: $light;
+	padding: 10px;
+}
+@mixin menuFont {
+	font-family: $raleway;
+	font-weight: $regular;
+	font-size: 1.5rem;
+}
